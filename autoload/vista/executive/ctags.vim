@@ -41,7 +41,7 @@ function! s:GetDefaultCmd(file) abort
   " Do not pass --extras for C/CPP in order to let uctags handle the tags for anonymous
   " entities correctly.
   if t:vista.source.filetype() !=# 'c' && t:vista.source.filetype() !=# 'cpp'
-    let common_opt .= ' --extras= '
+    let common_opt .= ' --extra= '
   endif
 
   let language_specific_opt = s:GetLanguageSpecificOptition(&filetype)
